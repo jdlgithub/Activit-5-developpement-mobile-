@@ -30,7 +30,7 @@ from ..composants import (
     visuel,
 )
 from ..donnees import trouver
-from ..scene import H_CENTRE, H_DROITE, Ecran, Forme, Ligne, Texte
+from ..scene import H_CENTRE, H_DROITE, Ecran, Forme, Texte
 
 NOM = "05 · Détail de l'objet"
 

@@ -66,17 +66,17 @@ def construire() -> Ecran:
         Texte(M + 88, y + 20, UTILE - 100, MOI.nom, charte.T_TITRE_SECTION, True, charte.TEXTE)
     )
     ecran.ajouter(
-        Texte(M + 88, y + 40, UTILE - 100, "%s · %s" % (MOI.filiere, MOI.niveau), 11, False,
+        Texte(M + 88, y + 44, UTILE - 100, "%s · %s" % (MOI.filiere, MOI.niveau), 11, False,
               charte.TEXTE_DISCRET)
     )
 
     # Score de confiance : note + nombre d'echanges, mis en avant en orange doux.
     ecran.ajouter(
-        Forme(M + 88, y + 58, 150, 24, charte.ORANGE_CLAIR, 12, None, 0, nom="Score / confiance"),
-        *notation(MOI.note, M + 98, y + 60, 11, charte.ORANGE_FONCE),
+        Forme(M + 88, y + 62, 150, 24, charte.ORANGE_CLAIR, 12, None, 0, nom="Score / confiance"),
+        *notation(MOI.note, M + 98, y + 64, 11, charte.ORANGE_FONCE),
     )
     ecran.ajouter(
-        Texte(M + UTILE - 96, y + 62, 80, "%d échanges" % MOI.nb_echanges, 10, False,
+        Texte(M + UTILE - 96, y + 66, 80, "%d échanges" % MOI.nb_echanges, 10, False,
               charte.TEXTE_SECONDAIRE, H_DROITE)
     )
     y += hauteur_entete + charte.ESP_4

@@ -60,10 +60,10 @@ def construire() -> Ecran:
     )
     ecran.ajouter(
         Texte(
-            M + 16, y_badges + 12, UTILE - 32,
+            M + 16, y_badges + 10, UTILE - 32,
             "Un campus, moins de gaspillage.<br>"
             "Empruntez ce dont vous avez besoin, rendez-le en bon état.",
-            12, False, "#CBE3CD", hauteur=12 * 1.35 * 2,
+            12, False, "#CBE3CD", interligne=1.35,
         )
     )
 

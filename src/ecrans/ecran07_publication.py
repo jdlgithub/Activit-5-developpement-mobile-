@@ -31,7 +31,7 @@ from ..scene import H_CENTRE, Ecran, Forme, Texte
 NOM = "07 · Publication d'un objet"
 
 # Zone d'ajout de photos : hauteur du placeholder.
-ZONE_PHOTO_H = 148
+ZONE_PHOTO_H = 124
 HAUTEUR_DESCRIPTION = 88
 HAUTEUR_CONDITIONS = 72
 
@@ -77,9 +77,9 @@ def construire() -> Ecran:
     ecran.ajouter(
         Forme(M, y, UTILE, ZONE_PHOTO_H, charte.SURFACE, charte.RAYON_CARTE,
               charte.BORDURE_FORCE, 1, style_bordure="dashed", nom="Photos / placeholder"),
-        *icone_camera(M + UTILE / 2, y + 56, charte.VERT, 30),
-        Texte(M, y + 84, UTILE, "Ajouter des photos", 13, True, charte.VERT, H_CENTRE),
-        Texte(M, y + 104, UTILE, "3 photos maximum · JPG ou PNG", 11, False,
+        *icone_camera(M + UTILE / 2, y + 38, charte.VERT, 30),
+        Texte(M, y + 70, UTILE, "Ajouter des photos", 13, True, charte.VERT, H_CENTRE),
+        Texte(M, y + 92, UTILE, "3 photos maximum · JPG ou PNG", 11, False,
               charte.TEXTE_DISCRET, H_CENTRE),
     )
     y += ZONE_PHOTO_H + charte.ESP_4
@@ -119,8 +119,7 @@ def construire() -> Ecran:
             M + 22, y, UTILE - 22,
             "Je m'engage à prendre soin de l'objet et à le prêter<br>"
             "dans le respect de la charte CampusShare.",
-            11, False, charte.TEXTE_SECONDAIRE,
-            hauteur=hauteur_ligne(11, 1.35) * 2,
+            11, False, charte.TEXTE_SECONDAIRE, interligne=1.25,
         )
     )
 

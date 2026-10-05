@@ -21,10 +21,10 @@ from ..composants import (
     hauteur_ligne,
     icone_cloche,
     logo,
-    puce_filtre,
+    rangee_puces,
 )
 from ..donnees import CATEGORIES, OBJETS
-from ..scene import H_CENTRE, H_DROITE, Ecran, Ellipse, Forme, Texte
+from ..scene import H_DROITE, Ecran, Ellipse, Texte
 
 NOM = "04 · Tableau de bord"
 
@@ -53,7 +53,7 @@ def construire() -> Ecran:
     ecran.ajouter(*logo(M + 15, y + 18, 30))
     ecran.ajouter(Texte(M + 38, y + 8, 160, "CampusShare", 17, True, charte.TEXTE))
     ecran.ajouter(
-        Texte(M + 38, y + 28, 180, "Bâtiment A · Bibliothèque", 10, False, charte.TEXTE_DISCRET)
+        Texte(M + 38, y + 31, 180, "Bâtiment A · Bibliothèque", 10, False, charte.TEXTE_DISCRET)
     )
 
     # Notifications : pastille de non-readue, cible tactile 44 px.
@@ -68,11 +68,15 @@ def construire() -> Ecran:
     y += 42 + charte.ESP_3
 
     # --- Filtres horizontaux par categorie ---
-    x_puce = M
-    for i, categorie in enumerate(CATEGORIES):
-        largeur_puce = len(categorie) * 7 + 28
-        ecran.ajouter(puce_filtre(x_puce, y, categorie, actif=(i == 0)))
-        x_puce += largeur_puce + charte.ESP_2
+    # Seules les puces tenant dans la largeur utile sont dessinees : la maquette
+    # ne presente aucun element hors cadre. Les suivantes sont accessibles par
+    # defilement horizontal.
+    puces, largeur_puces, tronquee = rangee_puces(M, y, UTILE, CATEGORIES, actif=0, ecran=charte.ESP_2)
+    ecran.ajouter(*puces)
+    if tronquee:
+        ecran.ajouter(
+            Texte(M + largeur_puces + charte.ESP_1, y + 8, 60, "…", charte.T_LABEL, True, charte.TEXTE_DISCRET)
+        )
     y += 32 + charte.ESP_4
 
     # --- Titre de section ---

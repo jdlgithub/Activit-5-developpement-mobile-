@@ -28,7 +28,7 @@ from ..composants import (
     zone_texte,
 )
 from ..donnees import DUREES, trouver
-from ..scene import H_CENTRE, Ecran, Forme, Texte
+from ..scene import Ecran, Forme, Texte
 
 NOM = "06 · Demande de prêt"
 

@@ -694,11 +694,8 @@ def carte_objet(x, y, l, objet, hauteur=190) -> list:
     morceaux += vignette(x + 8, y + 8, l - 16, 86, charte.VIGNETTE, visuel(objet.categorie))
 
     etiquette = etiquette_etat(objet)
-    morceaux.append(
-        FormeTexte(x + 10, y + 102, etiquette.l, etiquette.h, etiquette.contenu,
-                   etiquette.taille, etiquette.gras, etiquette.fond, etiquette.couleur_texte,
-                   H_CENTRE, V_CENTRE, etiquette.rayon, None, 0)
-    )
+    etiquette.x, etiquette.y = x + 10, y + 102
+    morceaux.append(etiquette)
 
     hauteur_titre = hauteur_ligne(13, 1.25) * 2
     morceaux.append(
@@ -727,11 +724,8 @@ def carte_objet_ligne(x, y, l, objet, hauteur=96, actions=True) -> list:
               hauteur=hauteur_ligne(14, 1.25) * 2)
     )
     etiquette = etiquette_etat(objet)
-    morceaux.append(
-        FormeTexte(x + 98, y + 46, etiquette.l, etiquette.h, etiquette.contenu,
-                   etiquette.taille, etiquette.gras, etiquette.fond, etiquette.couleur_texte,
-                   H_CENTRE, V_CENTRE, etiquette.rayon, None, 0)
-    )
+    etiquette.x, etiquette.y = x + 98, y + 46
+    morceaux.append(etiquette)
     morceaux.append(
         Texte(x + 98, y + 74, largeur_texte, objet.batiment, 11, False, charte.TEXTE_DISCRET)
     )
