@@ -1,0 +1,34 @@
+CampusShare — synthese de generation des maquettes
+====================================================
+
+Date            : 05/10/2026 05:48
+Document Pencil : out/CampusShare_Maquettes.epgz
+Format          : 8 pages, 360 x 800 px, portrait
+
+Formes totales  : 579
+Apercus SVG     : 8
+Apercus PNG     : 8
+
+Charte
+----------------------------------------------------
+Vert principal : #2E7D32
+Orange accent   : #FFB300
+Fond / surface  : #F4F6F4 / #FFFFFF
+Police          : Roboto, 'Noto Sans', 'DejaVu Sans', sans-serif
+Cible tactile   : 44 px minimum
+
+Ecrans
+----------------------------------------------------
+01. Accueil / Bienvenue                  27 formes
+02. Connexion                            45 formes
+03. Inscription                          50 formes
+04. Tableau de bord                     126 formes
+05. Détail de l'objet                    72 formes
+06. Demande de prêt                      82 formes
+07. Publication d'un objet               53 formes
+08. Profil & annonces                   124 formes
+
+Verification
+----------------------------------------------------
+python3 -m src.valider  structure du .epgz et proprietes natives
+python3 -m src.linter   debordements, collisions, cibles tactiles, charte
