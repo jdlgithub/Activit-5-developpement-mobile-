@@ -1,0 +1,134 @@
+# INSTRUCTIONS OPENCODE : PROJET CAMPUSSHARE (ATELIER DÉVELOPPEMENT MOBILE)
+
+CONTEXTE & OBJECTIF :
+Tu es un assistant de développement mobile expert. Tu dois concevoir et générer la structure d'une application mobile nommée "CampusShare" (plateforme d'échange et de prêt de matériel entre étudiants) dans le cadre d'un examen d'atelier de développement mobile. Le code doit être propre, modulaire et appliquer des principes stricts d'écoconception (ergonomie épurée, peu de composants superflus, forte lisibilité, respect d'une charte graphique unique).
+
+## CONVENTIONS TECHNIQUES GLOBALES
+
+* **Architecture / UI** : Interface claire, moderne, optimisée pour mobile standard (portrait).
+
+* **Charte Graphique** :
+
+  * Couleur primaire : Vert éco-responsable (#2E7D32) ou Bleu campus (#1976D2).
+
+  * Couleur secondaire / Accent : Orange doux (#FFB300).
+
+  * Fonds et Neutres : Fonds clairs à fort contraste ou mode sombre optimisé pour économiser l'énergie.
+
+  * Typographie : Cohérente sur l'ensemble de l'application (police unique sans-serif).
+
+* **Écrans à implémenter (Minimum 8 obligatoires)** :
+
+## ÉTAPE PAR ÉTAPE : GÉNÉRATION DES 8 ÉCRANS
+
+### ÉCRAN 1 : Splash Screen / Accueil (Bienvenue)
+
+* **Objectif** : Premier écran affiché au lancement.
+
+* **Éléments requis** : Logo minimaliste centré, slogan court ("Le partage de matériel entre étudiants"), et deux boutons principaux : "Se connecter" et "Créer un compte".
+
+### ÉCRAN 2 : Connexion
+
+* **Objectif** : Authentification de l'utilisateur.
+
+* **Éléments requis** :
+
+  * Titre ("Bon retour !").
+
+  * Champ de saisie email institutionnel.
+
+  * Champ de saisie mot de passe (masqué).
+
+  * Lien "Mot de passe oublié ?".
+
+  * Bouton d'action "Se connecter".
+
+  * Lien vers l'inscription.
+
+### ÉCRAN 3 : Inscription
+
+* **Objectif** : Création d'un nouveau compte étudiant.
+
+* **Éléments requis** :
+
+  * Titre ("Créer un compte").
+
+  * Champs : Nom, Prénom, Email universitaire, Mot de passe, Confirmation.
+
+  * Sélecteur de filière / niveau d'études.
+
+  * Case à cocher d'acceptation de la charte.
+
+  * Bouton "S'inscrire".
+
+### ÉCRAN 4 : Tableau de Bord / Fil d'Actualité (Accueil de l'App)
+
+* **Objectif** : Afficher le matériel disponible à l'emprunt sur le campus.
+
+* **Éléments requis** :
+
+  * Header : Logo, barre de recherche, icône de notifications.
+
+  * Barre de filtres horizontaux par catégorie (Livres, Technologie, Laboratoire, etc.).
+
+  * Liste / Grille de cartes (Cards) : Image miniature, Titre de l'objet, État, Propriétaire.
+
+  * Navigation inférieure (Tab bar) : Accueil, Publier, Messages, Profil.
+
+### ÉCRAN 5 : Détail d'un Objet (Fiche produit)
+
+* **Objectif** : Consulter les informations détaillées d'un équipement partagé.
+
+* **Éléments requis** :
+
+  * Bouton retour.
+
+  * Zone visuelle (image/illustration de l'objet).
+
+  * Titre, disponibilité, bâtiment du campus, nom et note du propriétaire (ex: ⭐ 4.8/5).
+
+  * Description textuelle.
+
+  * Bouton d'action fixe en bas : "Demander le prêt".
+
+### ÉCRAN 6 : Formulaire de Demande de Prêt
+
+* **Objectif** : Soumettre une demande d'emprunt au propriétaire.
+
+* **Éléments requis** :
+
+  * Sélecteurs de date (Début / Fin).
+
+  * Zone de texte pour un message au propriétaire.
+
+  * Rappel des règles de restitution éco-responsables.
+
+  * Bouton de validation "Envoyer la demande".
+
+### ÉCRAN 7 : Publication d'un Objet (Ajout de matériel)
+
+* **Objectif** : Permettre à un étudiant de proposer son matériel au prêt.
+
+* **Éléments requis** :
+
+  * Formulaire : Nom de l'objet, catégorie, ajout de photo (placeholder), description et conditions.
+
+  * Bouton de validation "Publier l'annonce".
+
+### ÉCRAN 8 : Profil et Gestion des Annonces
+
+* **Objectif** : Gérer son profil, ses annonces publiées et ses emprunts.
+
+* **Éléments requis** :
+
+  * En-tête : Avatar, Nom, Filière, Score de confiance.
+
+  * Onglets : "Mes annonces" / "Mes emprunts".
+
+  * Liste des objets avec actions rapides (Modifier / Supprimer).
+
+  * Bouton de déconnexion.
+
+## INSTRUCTION FINALE POUR OPENCODE
+
+Vérifie que l'ensemble de ces 8 écrans s'articule correctement via une arborescence cohérente, que la charte graphique est respectée de bout en bout, et fournis le code ou la structure détaillée pour chaque écran demandé.
